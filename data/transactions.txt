@@ -1,0 +1,2 @@
+c0879baf-8125-4223-b861-310c2a621cfa|2025-11-24|INCOME|salary|500000.0|andha paisa
+e01b06f3-7ff8-4bbb-a855-6db225003988|2025-11-24|INCOME|food|4000.0|panchmadhi

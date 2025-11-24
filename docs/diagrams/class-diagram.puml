@@ -1,0 +1,60 @@
+@startuml
+skinparam classAttributeIconVisibility false
+
+class Transaction {
+  - id : String
+  - amount : double
+  - type : String
+  - category : String
+  - description : String
+  - date : LocalDate
+  + toRecord() : String
+  + fromRecord(line) : Transaction
+}
+
+class FileTransactionStore {
+  - storageFile : Path
+  + add(Transaction)
+  + findAll() : List<Transaction>
+  + calculateBalance() : double
+  + spentForCategory(cat) : double
+  + topSpendingCategory() : String
+  + report() : String
+}
+
+class BudgetManager {
+  - budgetsFile : Path
+  + loadBudgets() : Map<String,Double>
+  + setBudget(cat, amount)
+  + budgetFor(cat) : double
+}
+
+class BudgetSnapshot {
+  - category : String
+  - limit : double
+  - spent : double
+  + getRemaining() : double
+}
+
+class AnalyticsService {
+  - transactionStore : FileTransactionStore
+  - budgetManager : BudgetManager
+  + currentBalance() : double
+  + topSpendingCategory() : String
+  + budgetSnapshots() : Map<String,BudgetSnapshot>
+  + fullReport() : String
+}
+
+class App {
+  + main(String[])
+}
+
+App --> AnalyticsService
+App --> BudgetManager
+AnalyticsService --> FileTransactionStore
+AnalyticsService --> BudgetManager
+AnalyticsService --> BudgetSnapshot
+FileTransactionStore --> Transaction
+BudgetManager --> BudgetSnapshot : produces *
+@enduml
+

@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+actor User
+
+rectangle CoinTrack {
+    usecase "Add Income/Expense" as UC1
+    usecase "Set Budget Limit" as UC2
+    usecase "View Analytics" as UC3
+    usecase "Generate Report" as UC4
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+UC3 .> UC4 : includes
+UC1 .> UC3 : updates
+@enduml
+

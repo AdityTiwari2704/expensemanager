@@ -1,0 +1,20 @@
+@startuml
+entity "transactions.txt" as Transactions {
+  * id : UUID
+  --
+  amount : decimal
+  type : enum {INCOME|EXPENSE}
+  category : string
+  description : string
+  date : date
+}
+
+entity "budgets.txt" as Budgets {
+  * category : string
+  --
+  limit : decimal
+}
+
+Budgets ||..o{ Transactions : "category"
+@enduml
+

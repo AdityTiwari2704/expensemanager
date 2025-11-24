@@ -1,0 +1,25 @@
+@startuml
+skinparam componentStyle rectangle
+
+actor User
+rectangle "Presentation Layer" {
+    component "Console Menu\n(main.App)" as UI
+}
+rectangle "Service Layer" {
+    component "BudgetManager" as BM
+    component "AnalyticsService" as AS
+}
+rectangle "Data Layer" {
+    component "FileTransactionStore" as DAO
+    component "Flat Files\n(data/*.txt)" as Files
+}
+
+User --> UI
+UI --> AS
+UI --> BM
+AS --> BM
+AS --> DAO
+DAO --> Files
+BM --> Files : budgets.txt
+@enduml
+

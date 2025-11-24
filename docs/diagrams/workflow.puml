@@ -1,0 +1,27 @@
+@startuml
+start
+partition "User" {
+    :Launch CoinTrack;
+}
+partition "System" {
+    :Show menu;
+    if (choice?) then (Add Income/Expense)
+        :Prompt details;
+        :Validate balance/budget;
+        :Persist transaction;
+    elseif (Set Budget)
+        :Prompt category+limit;
+        :Save budget entry;
+    elseif (View Analytics)
+        :Compute balance + top spending;
+        :Display budget stats;
+    elseif (View Report)
+        :Build text report;
+        :Print report;
+    else (Exit)
+        stop
+    endif
+    :Return to menu;
+}
+@enduml
+

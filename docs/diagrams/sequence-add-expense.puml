@@ -1,0 +1,23 @@
+@startuml
+actor User
+participant "App\n(Console)" as App
+participant "AnalyticsService" as AS
+participant "BudgetManager" as BM
+participant "FileTransactionStore" as DAO
+
+User -> App : select "Add Expense"\nenter category, amount
+App -> AS : currentBalance()
+AS -> DAO : calculateBalance()
+DAO --> AS : balance
+AS --> App : balance
+App -> BM : budgetFor(category)
+BM --> App : limit
+App -> DAO : spentForCategory(category)
+DAO --> App : spent
+App -> User : warn if limit exceeded
+User -> App : confirm continue
+App -> DAO : add(Transaction)
+DAO --> App : success
+App -> User : "Saved" message
+@enduml
+
