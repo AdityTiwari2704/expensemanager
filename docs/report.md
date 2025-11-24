@@ -5,11 +5,11 @@
 ## 1. Cover Page
 - **Title:** CoinTrack – Personal Finance Manager  
 
-- **Developed By:** UTKARSH GUPTA , 24BSA10214 
+- **Developed By:** Aditya Kumar Tiwari 24BSA10233 
  
 - **Course: Programming in Java CSE2006
 
-- **Faculty: Dr. Manorma Chouhan
+- **Faculty: Dr. Baseera
 
 - **Submission Date: 25/11/25
 
