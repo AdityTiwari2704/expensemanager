@@ -3,7 +3,7 @@
 > This document follows the official VITyarthi template. Export it to PDF (or copy into Word/LaTeX) after inserting screenshots and diagram images generated from the provided PlantUML sources in `docs/diagrams/`.
 
 ## 1. Cover Page
-- **Title:** CoinTrack – Personal Finance Manager  
+- **Title:** FinanceTracker – Personal Finance Manager  
 
 - **Developed By:** Aditya Kumar Tiwari 24BSA10233 
  
