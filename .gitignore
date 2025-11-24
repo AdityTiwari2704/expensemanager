@@ -4,6 +4,50 @@
 # Log files
 *.log
 
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# Gradle
+build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE / OS misc
+*.swp
+*.swo
+repl_history
+
+# Temporary files
+*.tmp
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
 # BlueJ files
 *.ctxt
 
