@@ -7,11 +7,11 @@
 
 - **Developed By:** Aditya Kumar Tiwari 24BSA10233 
  
-- **Course: Programming in Java CSE2006
+- **Course:** Programming in Java CSE2006
 
-- **Faculty: Dr. Baseera
+- **Faculty:** Dr. Baseera
 
-- **Submission Date: 25/11/25
+- **Submission Date:** 25/11/25
 
 
 ## 2. Introduction
